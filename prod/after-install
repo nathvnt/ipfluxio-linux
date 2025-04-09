@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+echo "Running IPFluxIO post-install setup..."
+
+INSTALL_DIR=/opt/ipfluxio
+
+bash "$INSTALL_DIR/postinstall.sh"

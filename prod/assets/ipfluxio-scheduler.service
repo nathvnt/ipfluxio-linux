@@ -1,0 +1,13 @@
+# assets/ipfluxio-scheduler.service
+
+[Unit]
+Description=IPFluxio System Job Scheduler
+After=network.target
+
+[Service]
+Type=oneshot
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/local/bin/ipfluxio-register-jobs.sh
+
+[Install]
+WantedBy=multi-user.target

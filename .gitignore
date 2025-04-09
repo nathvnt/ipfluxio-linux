@@ -1,0 +1,12 @@
+prod/node_modules/
+prod/dist/
+prod/linux-unpacked/
+prod/*.tar.gz
+prod/*.deb
+release/linux-unpacked/
+release/ipfluxio-1.0.0/
+release/builder-*.yml
+.DS_Store
+*.swp
+*.bak
+*.tmp

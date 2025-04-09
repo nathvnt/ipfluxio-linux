@@ -1,0 +1,218 @@
+
+
+button {
+    border-radius: 4px;
+    border: 2px solid var(--button-border);
+    color: var(--text-white);
+    cursor: pointer;
+    text-align: center;
+    align-items: center;      
+    justify-content: center; 
+    align-content: center;
+    box-shadow: 0px 8px 15px var(--box-shadow);
+}
+
+button:hover {
+    border: 2px solid #000000D9;
+}
+
+.button-group {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 0px 2.5px;
+    flex-grow: 1;
+}
+
+/* buttons in config menus  */
+.config-btn {
+  padding: 5px 10px;
+  margin: 0px 5px;
+}
+
+/* colors for buttons  */
+.teal-btn {
+  background: var(--teal-dim);
+  opacity: .75;
+}
+
+.teal-btn:hover {
+  background: linear-gradient(to bottom, var(--teal-light), var(--teal-dim));
+  opacity: 1;
+  font-weight: 500;
+}
+
+.stone-btn {
+  background: var(--stone-dim);
+  opacity: .75;
+}
+
+.stone-btn:hover {
+  background: linear-gradient(to bottom, var(--stone-light), var(--stone-dim));
+  opacity: 1;
+  font-weight: 500;
+}
+
+.amber-btn {
+  background: var(--amber-dim);
+  opacity: .75;
+}
+
+.amber-btn:hover {
+  background: linear-gradient(to bottom, var(--amber-light), var(--amber-dim));
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Top Main Menu Buttons */
+.main-menu button {
+    padding: 6px;
+    font-size: 13px;
+    min-height: 34px;
+    max-height: 36px;
+    min-width: 145px;
+    max-width: 150px;
+    flex: 1;
+  }
+  
+/* Top Main Menu Left Buttons */
+  .left-buttons button.active-mode {
+    background: linear-gradient(to bottom, var(--teal-light), var(--teal-dim));
+    opacity: 1;
+    font-weight: 500;
+  }
+
+  /* Middle Buttons */
+  .middle-buttons button.active-mode {
+    background: linear-gradient(to bottom, var(--stone-light), var(--stone-dim));
+    opacity: 1;
+    font-weight: 500;
+  }
+
+  /* Right Buttons */
+  .right-buttons button.active-mode {
+    background: linear-gradient(to bottom, var(--amber-light), var(--amber-dim));
+    opacity: 1;
+    font-weight: 500;
+  }
+  
+/* Buttons above traffic table */
+  .table-display-buttons button{
+    font-size: 13px;
+    padding: 4px;
+    height: 26px;
+    min-width: 130px;
+    max-width: 135px;
+}
+
+.table-display-buttons button.active-mode {
+  background: linear-gradient(to bottom, var(--stone-light), var(--stone-dim));
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Button below map */
+.refresh-btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+}
+
+.refresh-map-btn {    
+    font-size: 13px;
+    padding: 4px;
+    height: 28px;
+    min-width: 130px;
+    max-width: 135px; 
+}
+
+
+/* start stop scan buttons  */
+.start-scan{
+  height: 30px;
+  font-size: 14px;
+  margin: 0px 5px;
+  min-width: 142px;
+  max-width: 147px;
+}
+
+.stop-scan {
+  height: 30px;
+  font-size: 14px;
+  margin: 0px 5px;
+  min-width: 142px;
+  max-width: 147px;
+}
+
+.start-scan:hover {
+  font-size: 15px;
+}
+
+.stop-scan:hover {
+  font-size: 15px;
+}
+
+.generate-graph-btn {
+  height: 30px;
+  min-width: 220px;
+  max-width: 225px;
+  font-size: 14px;
+}
+
+.generate-graph-btn:hover {
+  font-size: 15px;
+}
+
+
+/* cool button border animation , currently start/start active scan and generate graph buttons */
+.animate-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.animate-button {
+  appearance: none;
+  border: none;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.animate-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1.5px;
+  left: -1.5px;  
+  width: 30px;
+  height: 30px;
+  border-top: 3px solid #0000008C;
+  border-left: 3px solid #0000008C;
+  border-radius: 4px;
+  transition: width .3s, height .3s;
+}
+
+.animate-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1.5px;
+  right: -1.5px;  
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid #0000008C;
+  border-right: 3px solid #0000008C;
+  border-radius: 4px;
+  transition: width .3s, height .3s;
+}
+
+.animate-button:hover::before,
+.animate-button:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: rgba(0, 0, 0, 0.75);
+}
+

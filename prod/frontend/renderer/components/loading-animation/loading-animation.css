@@ -1,0 +1,24 @@
+#loading-animation {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    /* transition: opacity 1s ease-out; */
+  }
+  
+  #sky svg {
+    animation: lightning 1.5s ease-in-out forwards;
+    filter: url(#glow);
+  }
+  
+  @keyframes lightning {
+    0% { opacity: 0; }
+    15% { opacity: 0.8; }
+    20% { opacity: 0.1; }
+    25% { opacity: 1; }
+    75% { opacity: 0; }
+    100% { opacity: 0; }
+  }

@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch for changes to IPFluxio scheduled job configs
+
+[Path]
+PathChanged=/var/lib/ipfluxio/scheduled_jobs.json
+
+[Install]
+WantedBy=multi-user.target

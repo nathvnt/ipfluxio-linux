@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ipflux.io</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <!-- <script type="module" src="./renderer/index.js"></script> -->
+    <script type="module" src="./dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>    
+<body>  
+    <div id="loading-animation"></div>
+    <div id="ui-wrapper" class="fade-in container flex-col">
+        <div id="menu-bnts-wrapper" class="sub-bg">
+            <div id="menu-btns-container" class="flex flex-row flex-end">
+                <div class="fade-in left-buttons button-group main-menu">
+                    <button id="active-mode-btn" class="active-mode teal-btn">Active Scan</button>  
+                    <button id="passive-mode-btn" class="inactive-mode teal-btn">Passive Baseline</button>
+                    <button id="live-comparison-btn" class="inactive-mode teal-btn" style="display: none;">Live Comparison</button>  
+                </div>
+                <div id="dynamic-active-buttons" class="fade-in flex-row flex-end"></div>
+                <div id="dynamic-passive-buttons" class="fade-in flex-row flex-end" style="display: none;"></div>
+                <div id="dynamic-comparison-buttons" class="fade-in flex-row flex-end" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div id="top-panel">
+            <div id="dynamic-active-top" class="container mod-con mod-con-top"></div>
+            <div id="dynamic-passive-top" class="container mod-con mod-con-top" style="display: none;"></div>
+            <div id="dynamic-comparison-top" class="container mod-con mod-con-top" style="display: none;"></div>
+        </div>
+
+        <div id="bottom-panel-wrapper">
+            <div id="bottom-resizer" class="fade-in bottom-resizer">
+                <div class="resizer-handle-wrapper"><div id="resizer-handle" class="resizer-handle"></div></div>
+            </div>
+
+            <div id="bottom-panel">
+                <div id="dynamic-active-bottom" class="container mod-con mod-con-btm"></div>
+                <div id="dynamic-passive-bottom" class="container mod-con mod-con-btm" style="display: none;"></div>
+                <div id="dynamic-comparison-bottom" class="container mod-con mod-con-btm" style="display: none;"></div>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
+
+
+

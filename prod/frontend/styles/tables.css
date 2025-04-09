@@ -1,0 +1,142 @@
+
+.scan-config-table thead,
+.security-table thead,
+.flagged-table thead{
+    background: var(--amber-dim-bg);
+}
+
+.traffic-table thead,
+.historical-data-table thead,
+.trusted-table thead {
+    background: var(--teal-dim-bg);
+}
+
+.historical-data-table thead th{
+    border-bottom: none !important;
+    text-align: center !important;
+}
+
+.security-table thead th{
+    text-align: center !important;
+}
+
+
+.historical-data-table tbody th,
+.security-table tbody th {
+    font-size: 14px !important;
+    color: var(--amber-accent);
+    font-weight: 500 !important;
+}
+
+.historical-data-table th {
+    width: 45%;
+}
+
+.security-table th {
+    width: 30%;
+}
+
+.historical-data-table td {
+    width: 55%;
+}
+
+.security-table td {
+    width: 70%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    min-width: 100px;
+    border: 2px solid var(--table-border);
+
+}
+
+.table th {
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.table td {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: var(--table-row-odd);  
+}
+
+.table tbody tr:nth-child(even) {
+    background: var(--table-row-even);  ; 
+}
+
+.table tbody tr:hover {
+    background: var(--table-row-hover);  
+    cursor: pointer;
+} 
+
+.table td.checkbox-cell {
+    min-width: auto !important;
+    max-width: 50px !important;
+    width: 50px !important;
+    text-align: center;
+}
+
+.table input[type="checkbox"] {
+    transform: scale(1.2);
+    margin: 5px;
+}
+
+
+.table td[data-key="ip"] {
+    font-weight: bold;
+    color: var(--amber-accent);
+}
+
+.ip{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--amber-accent);
+}
+
+.table td[data-key="protocols"] {
+    font-style: italic;
+    color: #06B6D4;
+}
+
+.table td[data-key="lat_long"] {
+    color: #10B981;
+}
+
+.table td[data-key="lat_long"].highlighted-lat-long {
+    background-color: #10B98199 !important;
+    color: var(--text-white) !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.status-flagged { color: var(--amber-light); font-weight: bold; }
+.status-trusted { color: var(--teal-light); font-weight: bold; }
+.status-na { color: white; font-weight: bold;  }
+
+
+.vt-results-col-head th{
+    background: var(--mod-con-border) !important;
+} 
+
+.vt-results tr td:first-child {
+    text-align: left;
+    width: 40%;
+    color: var(--amber-accent);
+}
+
+.vt-results tr td:last-child {
+    text-align: center;
+    width: 60%;
+}

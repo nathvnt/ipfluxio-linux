@@ -1,0 +1,45 @@
+.marquee-container {
+    display: flex;
+    width: 200px; 
+    height: 100%;
+    padding: 0px 10px;
+    overflow: hidden;
+    /* transition: width 0.3s ease; */
+    opacity: 1;
+    transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.marquee-container.hidden {
+    opacity: 0;
+}
+
+.marquee-text {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-white);
+    margin-left: 10px;
+    white-space: nowrap;  
+}
+
+.status-dot {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #ff4d4d;
+    box-shadow: 0 0 6px #ff4d4d99;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-dot.pulse {
+    animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+    0% { box-shadow: 0 0 4px #00cc6699; }
+    50% { box-shadow: 0 0 10px #00cc6699; }
+    100% { box-shadow: 0 0 4px #00cc6699; }
+}

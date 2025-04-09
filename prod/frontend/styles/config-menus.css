@@ -1,0 +1,192 @@
+/* //for drop downs, datetime, and number inputs */
+.config-item {
+    border: none;
+    background-color: var(--mod-con-border);
+    box-shadow: 0px 8px 15px var(--box-shadow);
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--text-white);
+}
+
+.config-item:hover {
+    background-color: var(--stone-light); 
+    box-shadow: 0px 4px 8px var(--box-shadow-hover);
+}
+
+.config-item option{
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-black);
+    background-color: var(--text-white);
+}
+
+/* //for aligning checkboxes with labels  */
+.row-selectors label{
+    padding-left: 10px;
+}
+
+.row-selectors input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+/* //custom drop down styles to imitate native  */
+.dropdown-wrap {
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+}
+
+.dropdown-controls {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+}
+
+.dropdown-toggle span{
+    text-align: right;
+}
+
+.dropdown-toggle:hover {
+    background-color: var(--stone-light);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    padding: 5px 0px;
+    z-index: 10;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content label, .filter-item, .endpoint-dropdown-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-black);
+}
+
+.graph-drop-content {
+    max-height: 150px !important;
+}
+
+.filter-item {
+    justify-content: space-between; 
+    text-wrap: wrap;
+}
+
+.filter-item span{
+    margin-left: 5px;
+    font-size: 14px;
+    width: 80%;
+    padding: 5px 0px;
+}
+
+.dropdown-content label:hover, .filter-item:hover, .endpoint-dropdown-item:hover {
+    background-color: #0d6efd; 
+    color: var(--text-white);
+}
+
+.dropdown-content input {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.filter-item button {
+    font-weight: bolder;
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    width: 20%;
+    padding: 5px 0px;
+}
+
+.filter-item button:hover {
+    background-color: var(--button-border-hover);
+}
+
+
+/* //stuff for timing window and timing window grid in passive scan config  */
+.timing-cell {
+    width: 15px;
+    height: 15px;
+    background-color: var(--amber-light);
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.timing-cell.active {
+    background-color: var( --teal-light);
+}
+
+.timing-grid-disabled .timing-cell {
+    background-color: #B8B8B8 !important; 
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#time-window-container {
+    width: 100%;
+    max-height: 80px; 
+    min-height: 80px;
+    overflow-y: auto; 
+    padding: 5px;
+    margin-left: 5px;
+    border: 2px solid var(--button-border);
+    border-radius: 4px;
+    background-color: #1e1e1eb3;
+    box-shadow: 0px 8px 15px var(--box-shadow);
+    color: var(--amber-light);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.time-window-entry {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 3px 0px;
+}
+
+.time-window-day {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.time-window-range {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+
+
+
+
+

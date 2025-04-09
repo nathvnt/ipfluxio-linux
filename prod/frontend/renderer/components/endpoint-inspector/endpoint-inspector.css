@@ -1,0 +1,53 @@
+/* //endpoint inspector  */
+.selected-endpoint-title, .selected-endpoint {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.selected-endpoint {
+    color: var(--teal-light);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* //for custom toggle switch  */
+.endpoint-toggle-wrapper {
+    width: 5%;
+}
+
+.endpoint-toggle {
+    position: relative;
+    display: inline-block;
+}
+
+.endpoint-toggle-input {
+    display: none;
+}
+
+.endpoint-toggle-label {
+    display: block;
+    width: 39px;  
+    height: 19.5px;
+    background-color: var(--teal-light);
+    border-radius: 99px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.endpoint-toggle-input:checked + .endpoint-toggle-label::after {
+    left: 20.8px;
+}
+
+.endpoint-toggle-label::after {
+    content: '';
+    position: absolute;
+    width: 16.9px;
+    height: 16.9px;
+    top: 1.5px;
+    left: 1.5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+
+

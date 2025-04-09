@@ -1,0 +1,60 @@
+{
+  "name": "ipfluxio",
+  "version": "1.0.0",
+  "description": "Linux network traffic analysis tool.",
+  "author": "trout",
+  "homepage": "https://ipflux.io",
+  "main": "electron-main/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "build:frontend": "node esbuild.config.js",
+    "dist": "npm run build:frontend && electron-builder --linux"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "electron": "^34.1.1",
+    "electron-builder": "^24.13.3",
+    "esbuild": "^0.25.2"
+  },
+  "build": {
+    "appId": "com.ipfluxio.app",
+    "productName": "ipfluxio",
+    "asar": true,
+    "directories": {
+      "output": "../ipflux-release"
+    },
+    "files": [
+      "electron-main",
+      "frontend",
+      "!node_modules/.cache",
+      "!**/*.md",
+      "!**/.*"
+    ],
+    "extraResources": [
+      { "from": "backend", "to": "backend" },
+      { "from": "logs", "to": "logs" },
+      { "from": "default-env", "to": "default-env" },
+      { "from": "postinstall.sh", "to": "postinstall.sh" },
+      { "from": "ARCH.sh", "to": "ARCH.sh" },
+      { "from": "assets", "to": "assets" }
+    ],
+    "linux": {
+      "category": "Utility",
+      "maintainer": "trout",
+      "executableName": "ipfluxio",
+      "desktop": {
+        "Name": "ipfluxio",
+        "Comment": "Network Analysis Tool",
+        "Categories": "Utility;Network Security Research;",
+        "Terminal": false
+      },
+      "target": ["deb", "tar.gz"]
+    },
+    "deb": {
+      "afterInstall": "after-install"
+    }
+  }
+}
