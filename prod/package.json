@@ -24,7 +24,7 @@
     "productName": "ipfluxio",
     "asar": true,
     "directories": {
-      "output": "../ipflux-release"
+      "output": "./ipflux-build"
     },
     "files": [
       "electron-main",
