@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ipflux.io</title>
+    <link rel="icon" type="image/png" href="./assets/cyborgcat.png" />
+    <link rel="stylesheet" href="./stylish.css">
+</head>    
+<body>  
+    <div id="ui-wrapper" class="fade-in">
+
+        <div id="top-banner" class="">
+            <div id="banner-title">ipflux.io</div>
+            <div id="banner-btns-wrapper" class="">
+                <div id="banner-btns" class="">
+                    <button id="home-btn" class="active-mode banner-btn amber-btn">Gallery</button>  
+                    <button id="info-btn" class="inactive-mode banner-btn amber-btn">Information</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- gallery -->
+        <div id="top-panel" class="scroll-section"></div>
+
+        <div id="info-divider" class="section-divider"></div>
+
+        <!-- information -->
+        <div id="bottom-panel" class="scroll-section"></div>
+
+        <div id="footer"></div>
+    </div>
+
+    <!-- inject html -->
+    <script src="./gallery/loadGallery.js"></script>
+    <script src="./info/loadInfo.js"></script>
+    <script src="./footer/loadFooter.js"></script>
+    
+    <!-- init event listeners -->
+    <script src="./index.js"></script>
+</body>
+</html>
+
+
+
