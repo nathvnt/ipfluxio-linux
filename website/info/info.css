@@ -111,7 +111,8 @@
 
 @media screen and (max-width: 1000px) {
     #information {
-        gap: 25px;     
+        gap: 25px;
+        overflow-y: auto;     
     }
     
     .details-wrapper {
