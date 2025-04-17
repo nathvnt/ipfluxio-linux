@@ -138,7 +138,7 @@ Install Node.js via [NodeSource](https://github.com/nodesource/distributions) or
 
 ---
 
-After installation, network traffic data logs are configurations can be found at the following locations on your host machine: 
+After installation, network traffic data logs and configuration files can be found at the following locations on your host machine: 
 
 ---
 ### Linux Data Storage Paths
