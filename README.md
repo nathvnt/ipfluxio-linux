@@ -7,7 +7,7 @@ Free and open source host-based network traffic analyzer designed for security r
 [Installation Instructions](https://github.com/nathvnt/ipfluxio-linux/blob/master/DOCUMENTATION.md#linux-installation-instructions-)
 
 Read the **full documentation** here:
-[Documentation](./DOCUMENTATION.md)
+[Documentation](https://github.com/nathvnt/ipfluxio-linux/blob/master/DOCUMENTATION.md#system-requirements)
 
 ### Preview
 
