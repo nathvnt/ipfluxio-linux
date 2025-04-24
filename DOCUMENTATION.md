@@ -11,13 +11,13 @@ Download and install using one of the pre-packaged distribution formats below.
 #### Step 1 – Download the `.deb` package
 
 ```bash
-curl -LO https://github.com/nathvnt/ipfluxio-linux/raw/master/release/ipfluxio_1.0.0_amd64.deb
+curl -LO https://github.com/nathvnt/ipfluxio-linux/raw/master/release/ipfluxio_1.0.1_amd64.deb
 ```
 
 #### Step 2 – Install the package
 
 ```bash
-sudo dpkg -i ipfluxio_1.0.0_amd64.deb
+sudo dpkg -i ipfluxio_1.0.1_amd64.deb
 ```
 
 ---
@@ -27,19 +27,19 @@ sudo dpkg -i ipfluxio_1.0.0_amd64.deb
 #### Step 1 – Download the `.tar.gz` archive
 
 ```bash
-curl -LO https://github.com/nathvnt/ipfluxio-linux/raw/master/release/ipfluxio-1.0.0.tar.gz
+curl -LO https://github.com/nathvnt/ipfluxio-linux/raw/master/release/ipfluxio-1.0.1.tar.gz
 ```
 
 #### Step 2 – Extract archive contents
 
 ```bash
-tar -xvzf ipfluxio-1.0.0.tar.gz
+tar -xvzf ipfluxio-1.0.1.tar.gz
 ```
 
 #### Step 3 – Navigate to the extracted directory
 
 ```bash
-cd ipfluxio-1.0.0/
+cd ipfluxio-1.0.1/
 ```
 
 #### Step 3 – Run installation script
@@ -186,7 +186,7 @@ After installation, network traffic data logs and configuration files can be fou
 ### Application Installation Paths (Linux)
 ---
 
-*These are the paths where the application is installed naturally and where the post installation script places extra resources necessary to run the applicaiton*
+*These are the paths where the application is installed naturally and where the post installation script places extra resources necessary to run the applicaiton.*
 
 ---
 

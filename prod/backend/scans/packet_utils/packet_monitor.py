@@ -21,6 +21,13 @@ def get_process_info(ip):
                 return "N/A"
     return "N/A"
 
+
+def is_private_ip(ip):
+    try:
+        return ipaddress.ip_address(ip).is_private
+    except ValueError:
+        return False
+
 PROTOCOL_MAP = {
     1: "ICMP",
     6: "TCP",
@@ -42,6 +49,7 @@ class PacketMonitor(BookKeeper, StatsUtils):
         self.interface = scan_config.get("networkInterface")
         self.host_ip = self._get_host_ip()
         self.config_direction = scan_config.get("trafficDirection")
+        self.exclude_private = scan_config.get("excludePrivate", False)
         self.start_time = time.time()
         self.history = []
         self.last_agg_time = time.time()
@@ -113,13 +121,17 @@ class PacketMonitor(BookKeeper, StatsUtils):
         if proto not in self.scan_config["protocols"]:
             return
 
-        #dodge traffic thats not communicating with host
-        if self.host_ip and src_ip != self.host_ip and dst_ip != self.host_ip:
-            return
-
         #determine traffic direction
         direction = 'outbound' if src_ip == self.host_ip else 'inbound'
         remote_ip = dst_ip if direction == 'outbound' else src_ip
+
+        if remote_ip == self.host_ip:
+            return
+
+        #filter out private ips if configured 
+        if self.exclude_private and is_private_ip(remote_ip):
+            #print(f"[Filtered: Private Endpoint] {remote_ip} (Direction: {direction})", flush=True)
+            return
 
         #check if configured to filter based on direction
         if self.config_direction in ['inbound', 'outbound'] and self.config_direction != direction:
